@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>찾아오시는 길</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+      table {
+    width: 70%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+  }
+    #myMap { width: 500px; height: 400px; background-color: #ccc;padding: 50px;}
+</style>
+<script src="http://maps.googleapis.com/maps/api/js?key="></script>
+<script>
+    function myMap() {
+        //mapCanvas 객체 변수 생성
+        var mapCanvas = document.getElementById("myMap");
+        //지도에 표시하고 싶은 기준 좌표 설정
+        var myLatlng = new google.maps.LatLng(37.499000, 127.03289);
+
+        var mapOptions = {
+            center: myLatlng, //센터는 입력한 위도/경도
+            zoom: 16, // zoom : 16 아까보다 훨씬 더 확대된 지도 출력
+            mapTypeId: google.maps.MapTypeId.ROADMAP //로드맵 형새
+        };
+        //구글 맵 생성
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            draggable: true, //마커 드래그 기능
+            title: '지하철 강남역에서 하차' //마커: 도움말 풍선(마우스 오버 시)
+        });
+        marker.setMap(map);
+    }
+</script>
+</head>
+<body onload="myMap()">
+	<!-- header -->
+	<header>
+		<div class="container">
+			<div class="logo"><a href="index.html"><img src="kh.png"></a></div>
+			<ul class="sidemenu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="sitemap.html">Sitemap</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- //header -->
+
+<!-- nav --------------------------------------------- -->
+	<nav>
+		<div class="container">
+			<ul class="leftMenu">
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="galary.html">갤러리</a></li>
+				<li class="dropBox">
+					<a href="board.html">게시판</a> 
+					<span class="dropmenu"> 
+						<span><a href="board.html">자유 게시판</a></span> 
+						<span><a href="qna.html">문의 게시판</a></span> 
+						<span><a href="suggest.html">건의 게시판</a></span>
+					</span>
+				</li>
+				<li class="dropBox">
+					<a href="http://www.youtube.com">멀티미디어</a> 
+					<span class="dropmenu"> 
+						<span><a href="http://www.melon.com">음악듣기</a></span> 
+						<span><a href="http://www.youtube.com">동영상보기</a></span> 
+					</span>
+				</li>
+				<li><a href="https://shoppinglive.naver.com/home">상품구매</a></li>
+				<li><a href="getmaps.html">찾아오시는 길</a></li>
+			</ul>
+			<ul class="rightMenu">
+				<li><a href="join.html">회원가입</a></li>
+				<li><a href="login.html">로그인</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- //nav -->
+	
+	<!-- section --------------------------------------------- -->
+    <section id="section1">
+	<h3>위치</h3>
+<hr><br>
+<div id="myMap"></div><br>
+
+<table border="1">
+	<tr>
+	    <td>주소</td>
+	    <td>서울특별시 강남구 테헤란로 14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F (T: 1544-9970 / F: 02-562-2378)</td>
+        <td></td>
+	</tr>
+	<tr>
+	    <td>버스</td>
+	    <td>역삼역.포스코P&S타워 정류장
+            지선 146 / 740 / 341 / 360         간선 1100 / 1700 / 2000 / 7007 / 8001</td>
+	</tr>
+    <tr>
+	    <td>지하철</td>
+	    <td>지하철 2호선 역삼역 3번출구 100m</td>
+	</tr>
+    </table>
+</section>
+	<!-- //section -->
+
+	<!-- footer -->
+	<footer>
+		<div class="top">
+			<div class="container">
+				<span>다운로드</span> <span>개인정보처리방침</span> <span>저작권지침및신고</span> <span>이메일무단수집거부</span>
+			</div>
+		</div>
+		<div class="container">
+            <strong>
+                Home : Location Log : Tag Log : Media Log : Guestbook : Admin : New Post
+            </strong>
+            <div class="copyright">
+                COPYRIGHT Ⓒ TAESEUNG's BLOG IS POWERED BY DAUM / DESIGNED BY TISTORY
+            </div>
+        </div>
+	</footer>
+	<!-- //footer -->
+	<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>페이지 제작</title>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<!-- header -->
+	<header>
+		<div class="container">
+			<div class="logo"><a href="index.html"><img src="kh.png"></a></div>
+			<ul class="sidemenu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="sitemap.html">Sitemap</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- //header -->
+
+<!-- nav --------------------------------------------- -->
+	<nav>
+		<div class="container">
+			<ul class="leftMenu">
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="galary.html">갤러리</a></li>
+				<li class="dropBox">
+					<a href="board.html">게시판</a> 
+					<span class="dropmenu"> 
+						<span><a href="board.html">자유 게시판</a></span> 
+						<span><a href="qna.html">문의 게시판</a></span> 
+						<span><a href="suggest.html">건의 게시판</a></span>
+					</span>
+				</li>
+				<li class="dropBox">
+					<a href="http://www.youtube.com">멀티미디어</a> 
+					<span class="dropmenu"> 
+						<span><a href="http://www.melon.com">음악듣기</a></span> 
+						<span><a href="http://www.youtube.com">동영상보기</a></span> 
+					</span>
+				</li>
+				<li><a href="https://shoppinglive.naver.com/home">상품구매</a></li>
+				<li><a href="getmaps.html">찾아오시는 길</a></li>
+			</ul>
+			<ul class="rightMenu">
+				<li><a href="join.html">회원가입</a></li>
+				<li><a href="login.html">로그인</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- //nav -->
+	
+	<!-- section --------------------------------------------- -->
+	<section>
+		<div class="container">
+            <h4>게시글 작성</h4>
+                <div>
+                    <form>
+                        <div><!-- 100행 30열의 크기로 텍스트필드 작성, 제목 미리입력, 필수조건 -->
+                            <textarea rows="1" cols="100" placeholder="제목" required></textarea>
+                        </div>
+                        <div><!-- 100행 30열의 크기로 텍스트필드 작성, 내용 미리입력 -->
+                            <textarea rows="30" cols="100" placeholder="내용"></textarea>
+                        </div><!-- 파일 타입 인풋-->
+                          <input type="file">
+                        <div><!-- 버튼을 클릭하면 자유게시판으로 이동하도록 설정-->
+                            <button onclick="location.href='board.html'">글 작성</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+	<!-- //section -->
+
+	<!-- footer -->
+	<footer>
+		<div class="top">
+			<div class="container">
+				<span>다운로드</span> <span>개인정보처리방침</span> <span>저작권지침및신고</span> <span>이메일무단수집거부</span>
+			</div>
+		</div>
+		<div class="container">
+            <strong>
+                Home : Location Log : Tag Log : Media Log : Guestbook : Admin : New Post
+            </strong>
+            <div class="copyright">
+                COPYRIGHT Ⓒ TAESEUNG's BLOG IS POWERED BY DAUM / DESIGNED BY TISTORY
+            </div>
+        </div>
+	</footer>
+	<!-- //footer -->
+	<script src="js/app.js"></script>
+</body>
+</html>

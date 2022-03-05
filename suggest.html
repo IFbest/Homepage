@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>페이지 제작</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+	.tables,.tables th,.tables td{border:0}
+	.tables a{color:#383838;text-decoration:none}
+	.tables{width:100%;border-bottom:1px solid #999;color:#666;font-size:12px;table-layout:fixed}
+	.tables caption{display:none}
+	.tables th{padding:5px 0 6px;border-top:solid 1px rgb(165, 247, 149);border-bottom:solid 1px #98f7a8;background-color:#93fcae;color:rgb(51, 51, 51);font-weight:bold;line-height:20px;vertical-align:top}
+	.tables td{padding:8px 0 9px;border-bottom:solid 1px #d2d2d2;text-align:center;line-height:18px;}
+	.tables .date,.tables .hit{padding:0;font-family:Tahoma;font-size:11px;line-height:normal}
+	.tables .title{text-align:left; padding-left:15px; font-size:13px;}
+	.tables .title .pic,.tables .title .new{margin:0 0 2px;vertical-align:middle}
+	.tables .title a.comment{padding:0;background:none;color:#f00;font-size:12px;font-weight:bold}
+	.tables tr.reply .title a{padding-left:16px;background:url(첨부파일/ic_reply.png) 0 1px no-repeat}
+	.paging button { margin: 0; padding: 0.5rem 1rem; font-family: sans-serif; font-size: 1rem; font-weight: 400;text-align: center;text-decoration: none;display: inline-block;width: auto;background: var(--button-bg-color);color: var(--button-color);border: none;border-radius: 4px; --button-bg-color: #a6f5b8; --button-hover-bg-color: #218838;box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);cursor: pointer;transition: 0.5s;}
+</style>
+</head>
+<body>
+	<!-- header -->
+	<header>
+		<div class="container">
+			<div class="logo"><a href="index.html"><img src="kh.png"></a></div>
+			<ul class="sidemenu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="sitemap.html">Sitemap</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- //header -->
+
+<!-- nav --------------------------------------------- -->
+	<nav>
+		<div class="container">
+			<ul class="leftMenu">
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="galary.html">갤러리</a></li>
+				<li class="dropBox">
+					<a href="board.html">게시판</a> 
+					<span class="dropmenu"> 
+						<span><a href="board.html">자유 게시판</a></span> 
+						<span><a href="qna.html">문의 게시판</a></span> 
+						<span><a href="suggest.html">건의 게시판</a></span>
+					</span>
+				</li>
+				<li class="dropBox">
+					<a href="http://www.youtube.com">멀티미디어</a> 
+					<span class="dropmenu"> 
+						<span><a href="http://www.melon.com">음악듣기</a></span> 
+						<span><a href="http://www.youtube.com">동영상보기</a></span> 
+					</span>
+				</li>
+				<li><a href="https://shoppinglive.naver.com/home">상품구매</a></li>
+				<li><a href="getmaps.html">찾아오시는 길</a></li>
+			</ul>
+			<ul class="rightMenu">
+				<li><a href="join.html">회원가입</a></li>
+				<li><a href="login.html">로그인</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- //nav -->
+	
+	<!-- section --------------------------------------------- -->
+	<section>
+		<div style="margin: 50px;"><span id="div" style="background-color: rgb(224, 247, 227); font-size: 30px;">건의해 주셔서 감사합니다. 건의해 주셔서 감사합니다. 건의해 주셔서 감사합니다. </span></div>
+		<table class="tables" border="1" cellspacing="0" summary="게시판의 글제목 리스트">
+			<caption>게시판 리스트</caption>
+			<colgroup>
+			<col>
+			<col width="110">
+			<col width="100">
+			<col width="80">
+			</colgroup>
+			<thead>
+			<tr>
+			<th scope="col">제목</th>
+			<th scope="col">글쓴이</th>
+			<th scope="col">날짜</th>
+			<th scope="col">조회수</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td class="title">
+			<a href="#">건의합니다</a>
+			 <a class="comment" href="#">[1]</a> 
+			</td>
+			<td class="name">이건의</td>
+			<td class="date">2022/02/12</td>
+			<td class="hit">1234</td>
+			</tr>
+			<tr>
+			<td class="title">
+			<a href="#">건의합니다</a>
+			 <a class="comment" href="#">[1]</a> 
+			</td>
+			<td class="name">이건의</td>
+			<td class="date">2022/02/12</td>
+			<td class="hit">1234</td>
+			</tr>
+			<tr>
+			<td class="title">
+			<a href="#">건의합니다</a>
+			 <a class="comment" href="#">[1]</a> 
+			</td>
+			<td class="name">이건의</td>
+			<td class="date">2022/02/12</td>
+			<td class="hit">1234</td>
+			</tr>
+			<tr>
+			<td class="title">
+			<a href="#">건의합니다</a>
+			 <a class="comment" href="#">[1]</a> 
+			</td>
+			<td class="name">이건의</td>
+			<td class="date">2022/02/12</td>
+			<td class="hit">1234</td>
+			</tr>
+			<tr>
+			<td class="title">
+			<a href="#">건의합니다</a>
+			 <a class="comment" href="#">[1]</a> 
+			</td>
+			<td class="name">이건의</td>
+			<td class="date">2022/02/12</td>
+			<td class="hit">1234</td>
+			</tr>
+			<tr>
+			<td class="title">
+			<a href="#">건의합니다</a>
+			 <a class="comment" href="#">[1]</a> 
+			</td>
+			<td class="name">이건의</td>
+			<td class="date">2022/02/12</td>
+			<td class="hit">1234</td>
+			</tr>
+			<!-- tr이 제목 1줄입니다 보일 list 갯수만큼 li반복합니다.-->
+			</tbody>
+			</table><br>
+			<div class="paging" style="padding: 5px;">
+				<button onclick="location.href='write.html'">글쓰기</button>
+			</div>
+			<div class="paging" style="width:270px;height:300px;margin:0 auto;padding: 10px;"> 
+				<button onclick="location.href='board.html'">1</button>
+				<button onclick="location.href='board.html'">2</button>
+				<button onclick="location.href='board.html'">3</button>
+				<button onclick="location.href='board.html'">4</button>
+				<button onclick="location.href='board.html'">5</button>
+			</div><br>
+	</section>
+	<!-- //section -->
+<br><br><br><br><br>
+	<!-- footer -->
+	<footer>
+		<div class="top">
+			<div class="container">
+				<span>다운로드</span> <span>개인정보처리방침</span> <span>저작권지침및신고</span> <span>이메일무단수집거부</span>
+			</div>
+		</div>
+		<div class="container">
+            <strong>
+                Home : Location Log : Tag Log : Media Log : Guestbook : Admin : New Post
+            </strong>
+            <div class="copyright">
+                COPYRIGHT Ⓒ TAESEUNG's BLOG IS POWERED BY DAUM / DESIGNED BY TISTORY
+            </div>
+        </div>
+	</footer>
+	<!-- //footer -->
+	<script src="js/app.js"></script>
+	<script>
+		var div = document.getElementById("div");
+		var timerID = setInterval("doRotate()", 200); //200밀리초 주기로 doRotate()호출
+		div.onclick = function(e) { // 마우스 클릭 이벤트 리스너
+		clearInterval(timerID); // 타이머 해제, 문자열 회전 중단
+		}
+		function doRotate() {
+		//div 태그의 텍스트 입력
+		var str = div.innerHTML;
+		//첫 번째 문자를 획득
+		var firstChar = str.substr(0,1);
+		//str 텍스트의 첫 문자 알아내기(인덱스 0에서부터 1개수만큼 새로운 문자열 리턴)
+		//두 번째 부터 마지막 까지 문자 저장
+		var remains = str.substr(1, str.length-1);
+		//첫 번째 문자를 가장 뒤로 보냄
+		str = remains + firstChar;
+		//변경 정보를 div 태그로 전송, timer가 지날 때 마다 동작 반복
+		div.innerHTML = str; //문자열을 하나씩 지우고 뒤로 이동시킴
+		}
+	</script>
+</body>
+</html>

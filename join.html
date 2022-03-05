@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>페이지 제작</title>
+<link rel="stylesheet" href="css/style.css">
+<style type="text/css">
+    form {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    background-color: none;
+    margin: 10px;
+  }
+  input {
+    margin: 10px;
+    padding: 5px;
+    outline-color: rgb(162, 252, 103);
+    border-color: rgb(162, 252, 103);
+    background-color: none;
+    border-radius: 5px;
+  }
+  input:focus {
+    background-color: cornflowerblue;
+  }
+    #registerForm label.error { scroll-margin-inline-start: 10px; color:red; }
+</style>  
+
+<script src="http://code.jquery.com/jquery-1.3.2.min.js" ></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.min.js" ></script>
+<script type="text/javascript">
+               
+  $(document).ready(function () {
+    $('#registerForm').validate({
+        rules: {
+            txtID:{required:true, minlength:3, remote:"Validate"},
+            txtPassword: {required:true, equalTo:'#txtPassword'},
+            txtPasswordConfirm: {required:true, equalTo:'#txtPassword'},
+        },
+        messages: {
+            txtID: {
+                 required:"필수 입력 항목 입니다",
+                 minlength: jQuery.format("아이디는 {0}자 이상 입력해주세요!"),
+                 remote : jQuery.format("입력하신 {0}는 이미존재하는 아이디입니다. ")
+            },
+            txtPassword:{
+                required: "필수 입력 항목 입니다",
+                equalTo:"암호를 다시 확인하세요",
+            }, 
+            txtPasswordConfirm: {
+                required: "필수 입력 항목 입니다",
+                equalTo:"암호를 다시 확인하세요" },               
+        },
+        submitHandler: function (frm){
+            frm.submit();   //유효성 검사를 통과시 전송
+        },
+        success: function(e){
+            //
+        }
+       
+    });
+    var txtPassword = document.getElementById("txtPasswordConfirm");
+    var result = document.getElementById("result");
+
+    // txtPassword에 포커스가 올 경우 이벤트 발생
+    txtPassword.onfocus = function (e) {
+    result.innerHTML = "비밀번호와 같게 작성해 주세요.";
+    };
+  });
+  
+</script>
+</head>
+<body>
+	<!-- header -->
+	<header>
+		<div class="container">
+			<div class="logo"><a href="index.html"><img src="kh.png"></a></div>
+			<ul class="sidemenu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="sitemap.html">Sitemap</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- //header -->
+
+<!-- nav --------------------------------------------- -->
+	<nav>
+		<div class="container">
+			<ul class="leftMenu">
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="galary.html">갤러리</a></li>
+				<li class="dropBox">
+					<a href="board.html">게시판</a> 
+					<span class="dropmenu"> 
+						<span><a href="board.html">자유 게시판</a></span> 
+						<span><a href="qna.html">문의 게시판</a></span> 
+						<span><a href="suggest.html">건의 게시판</a></span>
+					</span>
+				</li>
+				<li class="dropBox">
+					<a href="http://www.youtube.com">멀티미디어</a> 
+					<span class="dropmenu"> 
+						<span><a href="http://www.melon.com">음악듣기</a></span> 
+						<span><a href="http://www.youtube.com">동영상보기</a></span> 
+					</span>
+				</li>
+				<li><a href="https://shoppinglive.naver.com/home">상품구매</a></li>
+				<li><a href="getmaps.html">찾아오시는 길</a></li>
+			</ul>
+			<ul class="rightMenu">
+				<li><a href="join.html">회원가입</a></li>
+				<li><a href="login.html">로그인</a></li>
+			</ul>
+		</div>
+	</nav>
+	<!-- //nav -->
+	
+	<!-- section --------------------------------------------- -->
+	<section>
+        <div class="container">
+            <form id="registerForm" method="post" action="#">
+                아이디  <input type="text" id="txtID" name="txtID" /> <br />
+                패스워드  <input type="password" id="txtPassword" name="txtPassword"/> <br />
+                패스워드 확인  <input type="password" id="txtPasswordConfirm" name="txtPasswordConfirm" /> <br />
+                <div id="result"></div><br>
+                이메일  <input type="text" id="txtEmail" name="txtEmail" /> <br />
+                주소  <input type="text" id="textID" name="address" /><br />
+                <input type="submit" value="회원가입" onclick="location.href='index.html'"/>
+            </form>
+        </div>
+    </section>
+	<!-- //section -->
+
+	<!-- footer -->
+	<footer>
+		<div class="top">
+			<div class="container">
+				<span>다운로드</span> <span>개인정보처리방침</span> <span>저작권지침및신고</span> <span>이메일무단수집거부</span>
+			</div>
+		</div>
+		<div class="container">
+            <strong>
+                Home : Location Log : Tag Log : Media Log : Guestbook : Admin : New Post
+            </strong>
+            <div class="copyright">
+                COPYRIGHT Ⓒ TAESEUNG's BLOG IS POWERED BY DAUM / DESIGNED BY TISTORY
+            </div>
+        </div>
+	</footer>
+	<!-- //footer -->
+	<script src="js/app.js"></script>
+</body>
+</html>

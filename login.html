@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>페이지 제작</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="kh.png">
+                </div>
+                <ul class="sidemenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+            </div>
+        </header>
+<nav>
+    <div class="container">
+        <ul class="leftMenu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="galary.html">갤러리</a></li>
+            <li class="dropBox">
+                <a href="board.html">게시판</a>
+                <span class="dropmenu">
+                    <span><a href="board.html">자유 게시판</a></span> 
+						<span><a href="qna.html">문의 게시판</a></span> 
+						<span><a href="suggest.html">건의 게시판</a></span>
+					</span>
+				</li>
+				<li class="dropBox">
+					<a href="http://www.youtube.com">멀티미디어</a> 
+					<span class="dropmenu"> 
+						<span><a href="http://www.melon.com">음악듣기</a></span> 
+						<span><a href="http://www.youtube.com">동영상보기</a></span> 
+					</span>
+				</li>
+				<li><a href="https://shopping.naver.com/home/p/index.naver">상품구매</a></li>
+				<li><a href="getmaps.html">찾아오시는 길</a></li>
+			</ul>
+			<ul class="rightMenu">
+				<li><a href="join.html">회원가입</a></li>
+				<li><a href="login.html">로그인</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section id="section2">
+    <div class="container">
+        <div class="loginBox">
+            <div>
+                <div class="box">
+                    <div class="logo">
+                        <h1>로그인</h1>
+                    </div>
+                    <form action="/login" method="post">
+                    <input type="text" name="uid" placeholder="아이디">
+                <input type="password" name="pw" placeholder="비밀번호">
+            <button type="button" onclick="location.href='index.html'">로그인</button>
+        </form>
+                </div>
+                <div class="box">
+                    <div class="social logo">
+                        <h1>소셜 로그인 하기</h1>
+                        <button class="facebook" 
+                        onclick="location.href='https://ko-kr.facebook.com/login/'">페이스북 id 로그인</button>
+                        <button class="twitter" 
+                        onclick="location.href='https://twitter.com/i/flow/login?'">트위터 id 로그인</button>
+                        <button class="naver" 
+                        onclick="location.href='https://nid.naver.com/nidlogin.login'">네이버 id 로그인</button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="alert">
+                    <h1>도움이 필요하신가요?</h1>
+                    <p>
+                        <button onclick="window.open('find.html','window_name','width=600,height=500,location=no,status=no');">
+                            아이디 찾기</button>
+                        <button onclick="window.open('find.html','window_name','width=600,height=500,location=no,status=no');">
+                            비밀번호 찾기</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="clear"></div>
+
+<footer>
+    <div class="top">
+        <div class="container">
+            <span>다운로드</span>
+            <span>개인정보처리방침</span>
+            <span>저작권지침및신고</span>
+            <span>이메일무단수집거부</span>
+        </div>
+    </div>
+    <div class="container">
+        <strong>
+            home : location log : tag log : media log : guestbook : admin : new post
+        </strong>
+        <div class="copyright">
+            copyright @ 시타 북스's blog is powered by daum / designed by tistory
+        </div>
+    </div>
+</footer>
+</body>
+</html>
